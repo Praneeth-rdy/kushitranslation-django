@@ -2528,12 +2528,13 @@ p {
 ===========================*/
 /*===== features TWO =====*/
 .features-area {
+  background-color: #f4f6f7;
   padding-top: 120px;
   padding-bottom: 130px; }
 
 .single-features {
   padding: 40px 20px 52px;
-  background-color: #f4f6f7; }
+  background-color: #fff; }
   .single-features .features-title-icon .features-title a {
     font-size: 36px;
     line-height: 45px;

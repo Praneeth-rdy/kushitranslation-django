@@ -7,6 +7,7 @@
 /* v2.0.0
 /* ----------------------------------------------- */
 
+
 var pJS = function(tag_id, params){
 
   var canvas_el = document.querySelector('#'+tag_id+' > .particles-js-canvas-el');
@@ -126,6 +127,14 @@ var pJS = function(tag_id, params){
       mouse:{}
     },
     retina_detect: false,
+    "config_demo": {
+      "hide_card": false,
+      "background_color": "#0067f4",
+      "background_image": "",
+      "background_position": "50% 50%",
+      "background_repeat": "no-repeat",
+      "background_size": "cover"
+    },
     fn: {
       interact: {},
       modes: {},
@@ -1506,7 +1515,7 @@ window.particlesJS = function(tag_id, params){
   canvas_el.className = pJS_canvas_class;
 
   /* set size canvas */
-  canvas_el.style.width = "100%";
+  canvas_el.style.width = "100vw";
   canvas_el.style.height = "100%";
 
   /* append canvas */

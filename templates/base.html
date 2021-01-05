@@ -98,7 +98,7 @@
                         
                         <div class="navbar-btn d-none d-sm-inline-block">
                             <ul>
-                                <li><a class="solid" href="{% url 'admin:index' %}">Login</a></li>
+                                <li><a class="solid" href="{% url 'admin:index' %}">{% if is_logged_in %}Admin{% else %}Login{% endif %}</a></li>
                             </ul>
                         </div>
                     </nav> <!-- navbar -->
@@ -156,7 +156,6 @@
 
 
     {% comment %}Add your js in the following block in your extended html file{% endcomment %}
-    {% block js %}{% endblock %}
 
     <!--====== Jquery js ======-->
     <script src="{% static 'home/js/vendor/jquery-1.12.4.min.js' %}"></script>
@@ -173,5 +172,6 @@
 
     <!--====== Base js ======-->
     <script src="{% static 'base/base.js' %}"></script>
+    {% block js %}{% endblock %}
 </body>
 </html>

@@ -11,11 +11,17 @@ def home(request):
     services = Service.objects.all()
     faqs = Faq.objects.all()
     testimonials = Testimonial.objects.all()
+    try:
+        is_logged_in = request.user.is_authenticated
+    except:
+        is_logged_in = False
     context = {
+        'is_logged_in': is_logged_in,
         'services': services,
         'faqs': faqs,
         'testimonials': testimonials
     }
+    
     return render(request, 'home.html', context)
 
 def get_quote(request):

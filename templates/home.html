@@ -21,7 +21,7 @@
             
             #particles-js{
                 height: 30vh;
-                background-color: #0067f4;
+                background-color: navy;
                 background-image: url('');
                 background-size: cover;
                 background-position: 50% 50%;
@@ -33,6 +33,7 @@
                 padding: 0;
             }
         </style>
+        <link rel="stylesheet" href="{% static 'home/css/steps.css' %}"
     
     {% endblock %}
 </head>
@@ -132,7 +133,52 @@
     </section>
 
     <!--====== SLIDER PART ENDS ======-->
-    
+
+    <!--====== GET STARTED PART START ======-->
+    <section>
+        <div class="steps-container">
+            <div class="steps-container-text">
+                <h6 class="steps-container-sub-title">HOW TO GET STARTED</h6>
+                <h2 class="steps-container-title">
+                    Few Simple Steps <br/> for Successful Business
+                </h2>
+            </div>
+            <div class="row d-flex flex-row justify-content-center">
+                <div class="steps-container-card col-10 col-md-3 col-lg-2">
+                    <div class="number-container d-flex flex-row justify-content-center">
+                        <p class="steps-container-card-number">
+                            01
+                        </p>
+                    </div>
+                    <img src="{% static 'home/images/process1.png' %}" class="steps-container-card-image"/>
+                    <a href="{% url 'main_app:get_quote' %}"><h3 class="steps-container-card-heading">Get Quote</h3></a>
+                    <p class="steps-container-card-description">We’re a team of non-cynics who truly care for our work and for each other.</p>
+                </div>
+                <div class="steps-container-card col-10 col-md-3 col-lg-2">
+                    <div class="number-container d-flex flex-row justify-content-center">
+                        <p class="steps-container-card-number">
+                            02
+                        </p>
+                    </div>
+                    <img src="{% static 'home/images/process2-1.png' %}" class="steps-container-card-image"/>
+                    <h3 class="steps-container-card-heading">Review</h3>
+                    <p class="steps-container-card-description">We provide more than 20 integrations, including WordPress, Shopify, SquareSpace and BigCommerce.</p>
+                </div>
+                <div class="steps-container-card col-10 col-md-3 col-lg-2">
+                    <div class="number-container d-flex flex-row justify-content-center">
+                        <p class="steps-container-card-number">
+                            03
+                        </p>
+                    </div>
+                    <img src="{% static 'home/images/process3-1.png' %}" class="steps-container-card-image"/>
+                    <h3 class="steps-container-card-heading">Completion</h3>
+                    <p class="steps-container-card-description">Expand online website traffic with new languages and new counties.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--====== GET STARTED PART END ======-->
+
     <!--====== FEATRES TWO PART START ======-->
 
     <section id="services" class="features-area">
@@ -169,8 +215,6 @@
     </section>
 
     <!--====== FEATRES TWO PART ENDS ======-->
-
-
 
     <!--====== PARTICLE JS PART START ======-->
     <section>

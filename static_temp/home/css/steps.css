@@ -1,0 +1,70 @@
+.steps-container{
+    text-align: center;
+    padding: 30px;
+}
+
+.steps-container-card {
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0;
+    transition: box-shadow 600ms;
+}
+
+.steps-container-card:hover {
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+    transition: box-shadow 600ms;
+}
+
+.steps-container-sub-title{
+    font-size: 18px;
+    margin: 8px;
+    color: #A5B7D2;
+}
+
+.steps-container-title{
+    font-size: 38px;
+    font-weight: bold;
+    margin: 8px;
+    color: #1A1B1E;
+}
+
+.steps-container-card-heading{
+    font-size: 22px;
+    font-weight: bold;
+    margin: 8px;
+    color: #1A1B1E;
+}
+
+.steps-container-card-description{
+    font-size: 14px;
+    margin: 8px;
+    color: #606060;
+}
+.number-container{
+    margin-bottom: 10px;
+}
+.steps-container-card-number{
+    background-image: linear-gradient(to bottom right, navy , orange);
+    width: 60px;
+    padding: 15px;
+    border-radius: 50px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.steps-container-card-image{
+    height: 200px;
+}
+
+@media (max-width:768px){
+    .steps-container-card {
+        margin: 10px;
+        padding: 20px;
+        text-align: center;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+    }
+}

@@ -12,6 +12,17 @@ def home(request):
     faqs = Faq.objects.all()
     testimonials = Testimonial.objects.all()
     sliders = Slider.objects.all()
+    l=(len(faqs)//2)
+    print(l,1)
+    faqs1=[]
+    faqs2=[]
+    count = 0
+    for faq in faqs:
+        if count <= l:
+            faqs1.append(faq)
+            count += 1
+        else:
+            faqs2.append(faq)
     count = 0
     for slider in sliders:
         if count == 0:
@@ -26,7 +37,8 @@ def home(request):
     context = {
         'is_logged_in': is_logged_in,
         'services': services,
-        'faqs': faqs,
+        'faqs1': faqs1,
+        'faqs2': faqs2,
         'testimonials': testimonials,
         'sliders': sliders
     }

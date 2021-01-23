@@ -227,7 +227,7 @@
     <section id="about" class="about-area">
         <div class="container">
             <div class="row">
-                <div class="col-lg-5">
+                <div class="col-12">
                     <div class="faq-content mt-45">
                         <div class="about-title">
                             <h6 class="sub-title">A Little More About Us</h6>
@@ -235,31 +235,49 @@
                         </div> <!-- faq title -->
                         <div class="about-accordion">
                             <div class="accordion" id="accordionExample">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-12 col-lg-6">
+                                            {% for faq in faqs1 %}
+                                                <div class="card">
+                                                    <div class="card-header" id="heading{{faq.pk}}">
+                                                        <a href="#" class="collapsed" data-toggle="collapse"
+                                                            data-target="#collapse{{faq.pk}}" aria-expanded="false"
+                                                            aria-controls="collapse{{faq.pk}}">{{faq.question}}</a>
+                                                    </div>
 
-                                {% for faq in faqs %}
-                                <div class="card">
-                                    <div class="card-header" id="heading{{faq.pk}}">
-                                        <a href="#" class="collapsed" data-toggle="collapse"
-                                            data-target="#collapse{{faq.pk}}" aria-expanded="false"
-                                            aria-controls="collapse{{faq.pk}}">{{faq.question}}</a>
-                                    </div>
+                                                    <div id="collapse{{faq.pk}}" class="collapse" aria-labelledby="heading{{faq.pk}}"
+                                                        data-parent="#accordionExample">
+                                                        <div class="card-body">
+                                                            <p class="text">{{faq.answer}}</p>
+                                                        </div>
+                                                    </div>
+                                                </div> <!-- card -->
+                                            {% endfor %}
+                                        </div>
+                                        <div class="col-12 col-lg-6">
+                                            {% for faq in faqs2 %}
+                                                <div class="card">
+                                                    <div class="card-header" id="heading{{faq.pk}}">
+                                                        <a href="#" class="collapsed" data-toggle="collapse"
+                                                            data-target="#collapse{{faq.pk}}" aria-expanded="false"
+                                                            aria-controls="collapse{{faq.pk}}">{{faq.question}}</a>
+                                                    </div>
 
-                                    <div id="collapse{{faq.pk}}" class="collapse" aria-labelledby="heading{{faq.pk}}"
-                                        data-parent="#accordionExample">
-                                        <div class="card-body">
-                                            <p class="text">{{faq.answer}}</p>
+                                                    <div id="collapse{{faq.pk}}" class="collapse" aria-labelledby="heading{{faq.pk}}"
+                                                        data-parent="#accordionExample">
+                                                        <div class="card-body">
+                                                            <p class="text">{{faq.answer}}</p>
+                                                        </div>
+                                                    </div>
+                                                </div> <!-- card -->
+                                            {% endfor %}
                                         </div>
                                     </div>
-                                </div> <!-- card -->
-                                {% endfor %}
+                                </div>
                             </div>
                         </div> <!-- faq accordion -->
                     </div> <!-- faq content -->
-                </div>
-                <div class="col-lg-7">
-                    <div class="about-image mt-50">
-                        <img src="{% static 'home/images/about.jpg' %}" alt="about">
-                    </div> <!-- faq image -->
                 </div>
             </div> <!-- row -->
         </div> <!-- container -->

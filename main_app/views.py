@@ -12,8 +12,9 @@ def home(request):
     faqs = Faq.objects.all()
     testimonials = Testimonial.objects.all()
     sliders = Slider.objects.all()
+    counter_items = Counter.objects.all()
+    whys = WhyUs.objects.all()
     l=(len(faqs)//2)
-    print(l,1)
     faqs1=[]
     faqs2=[]
     count = 0
@@ -40,7 +41,9 @@ def home(request):
         'faqs1': faqs1,
         'faqs2': faqs2,
         'testimonials': testimonials,
-        'sliders': sliders
+        'sliders': sliders,
+        'counter_items': counter_items,
+        'whys': whys,
     }
     
     return render(request, 'home.html', context)

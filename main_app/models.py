@@ -30,3 +30,15 @@ class Slider(models.Model):
     title = models.CharField(max_length=50)
     text = models.TextField()
     image = models.ImageField(upload_to='home/slider/')
+
+class Counter(models.Model):
+    id = models.AutoField(primary_key=True)
+    number = models.IntegerField(default=0)
+    name = models.CharField(max_length=50)
+    duration = models.IntegerField(default=2000)
+
+class WhyUs(models.Model):
+    id = models.AutoField(primary_key=True)
+    title = models.CharField(max_length=50)
+    description = models.TextField()
+    icon_code = models.CharField(max_length=50)

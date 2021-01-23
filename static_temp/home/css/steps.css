@@ -86,7 +86,7 @@
 .services-container-card:hover {
     background-image: linear-gradient(to bottom right, navy , orange);
     box-shadow: 0;
-    transition: background-image 600ms;
+    transition: background-image 800ms;
 }
 
 .services-container-card:hover > .services-container-card-description, .services-container-card:hover > .services-container-card-heading {

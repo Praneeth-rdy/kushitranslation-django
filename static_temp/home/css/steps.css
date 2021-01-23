@@ -45,7 +45,7 @@
 .number-container{
     margin-bottom: 10px;
 }
-.steps-container-card-number{
+.steps-container-card-number, .services-container-card-icon{
     background-image: linear-gradient(to bottom right, navy , orange);
     width: 60px;
     padding: 15px;
@@ -72,11 +72,11 @@
 
 .services-container{
     text-align: center;
-    padding: 30px;
 }
 
 .services-container-card {
     background-color: #fff;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
     margin: 10px;
     padding: 20px;
     text-align: center;
@@ -85,12 +85,19 @@
 
 .services-container-card:hover {
     background-image: linear-gradient(to bottom right, navy , orange);
+    box-shadow: 0;
     transition: background-image 600ms;
 }
 
 .services-container-card:hover > .services-container-card-description, .services-container-card:hover > .services-container-card-heading {
     color: #fff;
     transition: color 600ms;
+}
+
+.services-container-card:hover > .services-container-card-icon {
+    color: navy;
+    background-image: linear-gradient(to bottom right, white , white);
+    transition: background-image 600ms;
 }
 
 .services-container-description{
@@ -126,8 +133,6 @@
 .about-container-card-description{
     font-size: 14px;
     margin: 8px;
-    margin-left: 30vw;
-    margin-right: 30vw; 
     color: #606060;
 }
 

@@ -144,54 +144,52 @@
     </section>
     <!--====== GET STARTED PART END ======-->
 
-    <!--====== FEATRES TWO PART START ======-->
+    <section class="features-area ">
+        <div class="container">
+            <div class="row">
+                <!--====== FEATRES TWO PART START ======-->
+                <section id="services" class="col-12 col-lg-6">
+                    <div class="services-container">
+                        <div class="row">
+                            {% for service in services %}
+                            <div class="services-container-card col-lg-5">
+                                <i class="lni {{service.icon_code}} services-container-card-icon"></i>
+                                <h3 class="services-container-card-heading">{{service.title}}</h3>
+                                <p class="services-container-card-description">{{service.description}}</p>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </section>
 
-    <section id="services" class="features-area pb-5">
-        <div class="services-container">
-            <div class="services-container-text">
-                <h2 class="services-container-title">
-                    Our Services
-                </h2>
-                <p class="services-container-description">
-                    Stop wasting time and money designing and managing a website that doesn’t get results. Happiness
-                    guaranteed!
-                </p>
-            </div>
-            <div class="row d-flex flex-row justify-content-center">
-                {% for service in services %}
-                <div class="services-container-card col-10 col-md-3 col-lg-2 pt-4">
-                    <h3 class="services-container-card-heading">{{service.title}}</h3>
-                    <p class="services-container-card-description">{{service.description}}</p>
-                </div>
-                {% endfor %}
+                <!--====== FEATRES TWO PART ENDS ======-->
+
+                <!--====== About Us PART START ======-->
+
+                <section class="col-12 col-lg-6" style="padding-top:0;">
+                    <div class="services-container">
+                        <div class="steps-container-text">
+                            <h6 class="steps-container-sub-title">ABOUT US</h6>
+                            <h2 class="steps-container-title">
+                                Grow Your Business <br /> With Kushi Translations
+                            </h2>
+                        </div>
+                        <p class="about-container-card-description">
+                            ConveyThis is a Software as a Service language translation firm founded in 2008 as a side project of
+                            Translation Services USA. It was conceived as a language switcher to offer automatic translation for
+                            websites powered by machine translators such as Google, AltaVista, Babelfish and SDL. You can see our
+                            first widgets on the ConveyThis Classic page. Even today, you can still download and install the
+                            original ConveyThis widget which consists of a cute button and a language menu.
+                        </p>
+
+                    </div>
+                </section>
+
+                <!--====== About Us PART ENDS ======-->
             </div>
         </div>
     </section>
-
-    <!--====== FEATRES TWO PART ENDS ======-->
-
-    <!--====== About Us PART START ======-->
-
-    <section class="features-area" style="padding-top:0;">
-        <div class="services-container">
-            <div class="steps-container-text">
-                <h6 class="steps-container-sub-title">ABOUT US</h6>
-                <h2 class="steps-container-title">
-                    Grow Your Business <br /> With Kushi Translations
-                </h2>
-            </div>
-            <p class="about-container-card-description">
-                ConveyThis is a Software as a Service language translation firm founded in 2008 as a side project of
-                Translation Services USA. It was conceived as a language switcher to offer automatic translation for
-                websites powered by machine translators such as Google, AltaVista, Babelfish and SDL. You can see our
-                first widgets on the ConveyThis Classic page. Even today, you can still download and install the
-                original ConveyThis widget which consists of a cute button and a language menu.
-            </p>
-
-        </div>
-    </section>
-
-    <!--====== About Us PART ENDS ======-->
+    
 
     <!--====== Counter PART START ======-->
     <section>

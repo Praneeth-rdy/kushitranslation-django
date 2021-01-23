@@ -11,6 +11,14 @@ def home(request):
     services = Service.objects.all()
     faqs = Faq.objects.all()
     testimonials = Testimonial.objects.all()
+    sliders = Slider.objects.all()
+    count = 0
+    for slider in sliders:
+        if count == 0:
+            slider.is_active = True
+            count += 1
+        else:
+            slider.is_active = False
     try:
         is_logged_in = request.user.is_authenticated
     except:
@@ -19,7 +27,8 @@ def home(request):
         'is_logged_in': is_logged_in,
         'services': services,
         'faqs': faqs,
-        'testimonials': testimonials
+        'testimonials': testimonials,
+        'sliders': sliders
     }
     
     return render(request, 'home.html', context)

@@ -347,7 +347,7 @@
                             {% for testimonial in testimonials %}
                             <div class="single-testimonial">
                                 <div class="testimonial-text">
-                                    <p class="text">“{{testimonial.quotation}}”</p>
+                                    <p class="contact">“{{testimonial.quotation}}”</p>
                                 </div>
                                 <div class="testimonial-author d-sm-flex justify-content-between">
                                     <div class="author-info">
@@ -381,64 +381,39 @@
     <!--====== TEAM START ======-->
 
     <section id="team" class="team-area pt-120 pb-130">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-6 col-md-10">
-                    <div class="section-title text-center pb-30">
-                        <h3 class="title">Contact</h3>
-                        <p class="text">Stop wasting time and money designing and managing a website that doesn’t get
-                            results. Happiness guaranteed!</p>
-                    </div> <!-- section title -->
-                </div>
-            </div> <!-- row -->
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="contact-map mt-30">
-                        <iframe id="gmap_canvas"
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1943.2686352140852!2d77.65206065806676!3d13.065099497698656!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae19ff5e8ea249%3A0x54874e4d077a7aa0!2sKuvempu%20Layout%2C%20Visthar%2C%20Bengaluru%2C%20Karnataka%20560077!5e0!3m2!1sen!2sin!4v1609680421689!5m2!1sen!2sin"
-                            frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
-                    </div> <!-- row -->
-                </div>
-            </div> <!-- row -->
-            <div class="contact-info pt-30">
+        <div class="steps-container">
+            <div class="steps-container-text">
+                <!-- <h6 class="steps-container-sub-title">HOW TO GET STARTED</h6> -->
+                <h2 class="steps-container-title m-5">
+                    Contact Our <br> Translation Company
+                </h2>
+            </div>
+            <div class="container">
                 <div class="row">
-                    <div class="col-lg-4 col-md-6">
-                        <div class="single-contact-info contact-color-1 mt-30 d-flex ">
-                            <div class="contact-info-icon">
-                                <i class="lni lni-map-marker"></i>
+                    <div class="col-12 col-lg-4 d-flex flex-column justify-content-start">
+                            <div class="contact-box">
+                                <i class="lni lni-phone why-icon"></i>
+                                <h3 class="contact-box-heading mb-3">Call</h3>
+                                <p class="contact">This is a description</p>
+                                <p class="contact-box-description">+91 7411604598</p>
                             </div>
-                            <div class="contact-info-content media-body d-flex flex-column justify-content-center">
-                                <p class="text">
-                                    Kuvempu Layout, Devasandra,
-                                    Krishnarajapuram, Bengaluru,
-                                    Karnataka - 560036.
-                                </p>
+                            <div class="contact-box">
+                                <i class="lni lni-envelope why-icon"></i>
+                                <h3 class="contact-box-heading mb-3">Email</h3>
+                                <p class="contact">This is a description</p>
+                                <p class="contact-box-description">kushitranslations@gmail.com</p>
                             </div>
-                        </div> <!-- single contact info -->
+                            <div class="contact-box">
+                                <i class="lni lni-home why-icon"></i>
+                                <h3 class="contact-box-heading mb-3">Office</h3>
+                                <p class="contact"></p>
+                                <p class="contact-box-description">Kuvempu Layout, Devasandra, Krishnarajapuram, Bengaluru, Karnataka - 560036</p>
+                            </div>
                     </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="single-contact-info contact-color-2 mt-30 d-flex ">
-                            <div class="contact-info-icon">
-                                <i class="lni lni-envelope"></i>
-                            </div>
-                            <div class="contact-info-content media-body d-flex flex-column justify-content-center">
-                                <p class="text">kushitranslations@gmail.com</p>
-                            </div>
-                        </div> <!-- single contact info -->
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="single-contact-info contact-color-3 mt-30 d-flex ">
-                            <div class="contact-info-icon">
-                                <i class="lni lni-phone"></i>
-                            </div>
-                            <div class="contact-info-content media-body d-flex flex-column justify-content-center">
-                                <p class="text">+91 7411604598</p>
-                            </div>
-                        </div> <!-- single contact info -->
-                    </div>
-                </div> <!-- row -->
-            </div> <!-- contact info -->
-        </div> <!-- container -->
+                    <div class="col-12 col-lg-8 img-contact"></div>
+                </div>
+            </div>
+        </div>
     </section>
 
     <!--====== TEAM  ENDS ======-->
@@ -562,7 +537,7 @@
 
     <!--====== Main js ======-->
     <script src="{% static 'home/js/main.js' %}"></script>
-    <script">
+    <script>
         $.fn.jQuerySimpleCounter = function( options ) {
             var settings = $.extend({
                 start:  0,

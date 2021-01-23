@@ -66,6 +66,31 @@
     font-weight: bold;
     margin: 16px;
 }
+.img-contact{
+    background-image: url("/static/home/images/contact-img.jpg");
+    background-size: cover;
+}
+
+.contact-box {
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+}
+.contact-box-heading{
+    font-size: 22px;
+    font-weight: bold;
+    margin: 8px;
+    color: #1A1B1E;
+}
+
+.contact-box-description{
+    font-size: 14px;
+    margin: 8px;
+    color: #606060;
+}
+
 
 @media (max-width:768px){
     .steps-container-card {

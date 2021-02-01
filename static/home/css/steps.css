@@ -172,6 +172,21 @@
     color: #606060;
 }
 
+.footer-list{
+    list-style-type: none;
+}
+
+.footer-heading{
+    font-size: 22px;
+    font-weight: bold;
+    color: orange;
+}
+.footer-text{
+    font-size: 16px;
+    color: #fff;
+}
+
+
 @media (max-width:768px){
     .services-container-card {
         margin: 10px;

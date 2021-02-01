@@ -32,11 +32,30 @@
             margin: 0;
             padding: 0;
         }
+
+        .button-contact {
+            font-size: 20px;
+            color: #fff;
+            position: fixed;
+            right: 70px;
+            bottom: 20px;
+            width: 45px;
+            height: 45px;
+            line-height: 45px;
+            border-radius: 5px;
+            background-color: navy;
+            text-align: center;
+            z-index: 99;
+        }
+        .button-contact:hover {
+            color: #fff;
+            background-color: navy; 
+        }
     </style>
     <link rel="stylesheet" href="{% static 'home/css/steps.css' %}" />
     <link rel="stylesheet" href="{% static 'home/css/counter.css' %}" />
 
-    {% endblock %} 
+    {% endblock %}
 </head>
 
 <body>
@@ -175,10 +194,14 @@
                             </h2>
                         </div>
                         <p class="about-container-card-description">
-                            ConveyThis is a Software as a Service language translation firm founded in 2008 as a side project of
-                            Translation Services USA. It was conceived as a language switcher to offer automatic translation for
-                            websites powered by machine translators such as Google, AltaVista, Babelfish and SDL. You can see our
-                            first widgets on the ConveyThis Classic page. Even today, you can still download and install the
+                            ConveyThis is a Software as a Service language translation firm founded in 2008 as a side
+                            project of
+                            Translation Services USA. It was conceived as a language switcher to offer automatic
+                            translation for
+                            websites powered by machine translators such as Google, AltaVista, Babelfish and SDL. You
+                            can see our
+                            first widgets on the ConveyThis Classic page. Even today, you can still download and install
+                            the
                             original ConveyThis widget which consists of a cute button and a language menu.
                         </p>
 
@@ -189,7 +212,7 @@
             </div>
         </div>
     </section>
-    
+
 
     <!--====== Counter PART START ======-->
     <section>
@@ -197,11 +220,12 @@
             <div class="fullWidth eight columns">
                 <div class="projectFactsWrap d-flex flex-row justify-content-center">
                     {% for counter in counter_items %}
-                        <div class="item wow fadeInUpBig animated animated" data-number="{{counter.number}}" style="visibility: visible;">
-                            <i class="fa fa-briefcase"></i>
-                            <p id="number{{counter.pk}}" class="number">{{counter.number}}</p>
-                            <p>{{counter.name}}</p>
-                        </div>
+                    <div class="item wow fadeInUpBig animated animated" data-number="{{counter.number}}"
+                        style="visibility: visible;">
+                        <i class="fa fa-briefcase"></i>
+                        <p id="number{{counter.pk}}" class="number">{{counter.number}}</p>
+                        <p>{{counter.name}}</p>
+                    </div>
                     {% endfor %}
                 </div>
             </div>
@@ -220,13 +244,13 @@
             </div>
             <div class="container">
                 <div class="row d-flex flex-row justify-content-center">
-                {% for why in whys %}
+                    {% for why in whys %}
                     <div class="col-10 col-lg-3">
                         <i class="lni {{why.icon_code}} why-icon"></i>
                         <h3 class="steps-container-card-heading mb-3">{{why.title}}</h3>
                         <p class="steps-container-card-description">{{why.description}}</p>
                     </div>
-                {% endfor %}
+                    {% endfor %}
                 </div>
             </div>
         </div>
@@ -250,38 +274,38 @@
                                     <div class="row">
                                         <div class="col-12 col-lg-6">
                                             {% for faq in faqs1 %}
-                                                <div class="card">
-                                                    <div class="card-header" id="heading{{faq.pk}}">
-                                                        <a href="#" class="collapsed" data-toggle="collapse"
-                                                            data-target="#collapse{{faq.pk}}" aria-expanded="false"
-                                                            aria-controls="collapse{{faq.pk}}">{{faq.question}}</a>
-                                                    </div>
+                                            <div class="card">
+                                                <div class="card-header" id="heading{{faq.pk}}">
+                                                    <a href="#" class="collapsed" data-toggle="collapse"
+                                                        data-target="#collapse{{faq.pk}}" aria-expanded="false"
+                                                        aria-controls="collapse{{faq.pk}}">{{faq.question}}</a>
+                                                </div>
 
-                                                    <div id="collapse{{faq.pk}}" class="collapse" aria-labelledby="heading{{faq.pk}}"
-                                                        data-parent="#accordionExample">
-                                                        <div class="card-body">
-                                                            <p class="text">{{faq.answer}}</p>
-                                                        </div>
+                                                <div id="collapse{{faq.pk}}" class="collapse"
+                                                    aria-labelledby="heading{{faq.pk}}" data-parent="#accordionExample">
+                                                    <div class="card-body">
+                                                        <p class="text">{{faq.answer}}</p>
                                                     </div>
-                                                </div> <!-- card -->
+                                                </div>
+                                            </div> <!-- card -->
                                             {% endfor %}
                                         </div>
                                         <div class="col-12 col-lg-6">
                                             {% for faq in faqs2 %}
-                                                <div class="card">
-                                                    <div class="card-header" id="heading{{faq.pk}}">
-                                                        <a href="#" class="collapsed" data-toggle="collapse"
-                                                            data-target="#collapse{{faq.pk}}" aria-expanded="false"
-                                                            aria-controls="collapse{{faq.pk}}">{{faq.question}}</a>
-                                                    </div>
+                                            <div class="card">
+                                                <div class="card-header" id="heading{{faq.pk}}">
+                                                    <a href="#" class="collapsed" data-toggle="collapse"
+                                                        data-target="#collapse{{faq.pk}}" aria-expanded="false"
+                                                        aria-controls="collapse{{faq.pk}}">{{faq.question}}</a>
+                                                </div>
 
-                                                    <div id="collapse{{faq.pk}}" class="collapse" aria-labelledby="heading{{faq.pk}}"
-                                                        data-parent="#accordionExample">
-                                                        <div class="card-body">
-                                                            <p class="text">{{faq.answer}}</p>
-                                                        </div>
+                                                <div id="collapse{{faq.pk}}" class="collapse"
+                                                    aria-labelledby="heading{{faq.pk}}" data-parent="#accordionExample">
+                                                    <div class="card-body">
+                                                        <p class="text">{{faq.answer}}</p>
                                                     </div>
-                                                </div> <!-- card -->
+                                                </div>
+                                            </div> <!-- card -->
                                             {% endfor %}
                                         </div>
                                     </div>
@@ -391,24 +415,25 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12 col-lg-4 d-flex flex-column justify-content-start">
-                            <div class="contact-box">
-                                <i class="lni lni-phone why-icon"></i>
-                                <h3 class="contact-box-heading mb-3">Call</h3>
-                                <p class="contact">This is a description</p>
-                                <p class="contact-box-description">+91 7411604598</p>
-                            </div>
-                            <div class="contact-box">
-                                <i class="lni lni-envelope why-icon"></i>
-                                <h3 class="contact-box-heading mb-3">Email</h3>
-                                <p class="contact">This is a description</p>
-                                <p class="contact-box-description">kushitranslations@gmail.com</p>
-                            </div>
-                            <div class="contact-box">
-                                <i class="lni lni-home why-icon"></i>
-                                <h3 class="contact-box-heading mb-3">Office</h3>
-                                <p class="contact"></p>
-                                <p class="contact-box-description">Kuvempu Layout, Devasandra, Krishnarajapuram, Bengaluru, Karnataka - 560036</p>
-                            </div>
+                        <div class="contact-box">
+                            <i class="lni lni-phone why-icon"></i>
+                            <h3 class="contact-box-heading mb-3">Call</h3>
+                            <p class="contact">This is a description</p>
+                            <p class="contact-box-description">+91 7411604598</p>
+                        </div>
+                        <div class="contact-box">
+                            <i class="lni lni-envelope why-icon"></i>
+                            <h3 class="contact-box-heading mb-3">Email</h3>
+                            <p class="contact">This is a description</p>
+                            <p class="contact-box-description">kushitranslations@gmail.com</p>
+                        </div>
+                        <div class="contact-box">
+                            <i class="lni lni-home why-icon"></i>
+                            <h3 class="contact-box-heading mb-3">Office</h3>
+                            <p class="contact"></p>
+                            <p class="contact-box-description">Kuvempu Layout, Devasandra, Krishnarajapuram, Bengaluru,
+                                Karnataka - 560036</p>
+                        </div>
                     </div>
                     <div class="col-12 col-lg-8 img-contact"></div>
                 </div>
@@ -418,73 +443,90 @@
 
     <!--====== TEAM  ENDS ======-->
 
-    <!--====== CONTACT PART START ======-->
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+            <div class="modal-content">
+                <div class="modal-body" style="padding:0;">
 
-    <section id="contact" class="contact-area">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="contact-wrapper form-style-two pt-115">
-                        <h4 class="contact-title pb-10"><i class="lni lni-envelope"></i> Leave <span>A Message.</span>
-                        </h4>
+                    <!--====== CONTACT PART START ======-->
 
-                        <form id="contact-form" action="contact.php" method="post">
+                    <section id="contact" class="contact-area">
+                        <div class="container">
                             <div class="row">
-                                <div class="col-md-6">
-                                    <div class="form-input mt-25">
-                                        <label>Name</label>
-                                        <div class="input-items default">
-                                            <input name="name" type="text" placeholder="Name">
-                                            <i class="lni lni-user"></i>
-                                        </div>
-                                    </div> <!-- form input -->
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-input mt-25">
-                                        <label>Email</label>
-                                        <div class="input-items default">
-                                            <input type="email" name="email" placeholder="Email">
-                                            <i class="lni lni-envelope"></i>
-                                        </div>
-                                    </div> <!-- form input -->
-                                </div>
-                                <div class="col-md-12">
-                                    <div class="form-input mt-25">
-                                        <label>Subject</label>
-                                        <div class="input-items default">
-                                            <input name="subject" placeholder="Subject"></input>
-                                            <i class="lni lni-pencil-alt"></i>
-                                        </div>
-                                    </div> <!-- form input -->
-                                </div>
-                                <div class="col-md-12">
-                                    <div class="form-input mt-25">
-                                        <label>Message</label>
-                                        <div class="input-items default">
-                                            <textarea name="massage" placeholder="Message"></textarea>
-                                            <i class="lni lni-pencil-alt"></i>
-                                        </div>
-                                    </div> <!-- form input -->
-                                </div>
-                                <p class="form-message"></p>
-                                <div class="col-md-12">
-                                    <div class="form-input light-rounded-buttons mt-30">
-                                        <button class="main-btn light-rounded-two">Send Message</button>
-                                    </div> <!-- form input -->
+                                <div class="col-lg-12">
+                                    <div class="contact-wrapper form-style-two pt-115">
+                                        <h4 class="contact-title pb-10"><i class="lni lni-envelope"></i> Leave <span>A
+                                                Message.</span>
+                                        </h4>
+
+                                        <form id="contact-form" action="contact.php" method="post">
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="form-input mt-25">
+                                                        <label>Name</label>
+                                                        <div class="input-items default">
+                                                            <input name="name" type="text" placeholder="Name">
+                                                            <i class="lni lni-user"></i>
+                                                        </div>
+                                                    </div> <!-- form input -->
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-input mt-25">
+                                                        <label>Email</label>
+                                                        <div class="input-items default">
+                                                            <input type="email" name="email" placeholder="Email">
+                                                            <i class="lni lni-envelope"></i>
+                                                        </div>
+                                                    </div> <!-- form input -->
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <div class="form-input mt-25">
+                                                        <label>Subject</label>
+                                                        <div class="input-items default">
+                                                            <input name="subject" placeholder="Subject"></input>
+                                                            <i class="lni lni-pencil-alt"></i>
+                                                        </div>
+                                                    </div> <!-- form input -->
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <div class="form-input mt-25">
+                                                        <label>Message</label>
+                                                        <div class="input-items default">
+                                                            <textarea name="massage" placeholder="Message"></textarea>
+                                                            <i class="lni lni-pencil-alt"></i>
+                                                        </div>
+                                                    </div> <!-- form input -->
+                                                </div>
+                                                <p class="form-message"></p>
+                                                <div class="col-md-12">
+                                                    <div class="form-input light-rounded-buttons mt-30">
+                                                        <button class="main-btn light-rounded-two">Send Message</button>
+                                                    </div> <!-- form input -->
+                                                </div>
+                                            </div> <!-- row -->
+                                        </form>
+                                    </div> <!-- contact wrapper form -->
                                 </div>
                             </div> <!-- row -->
-                        </form>
-                    </div> <!-- contact wrapper form -->
-                </div>
-            </div> <!-- row -->
-        </div> <!-- container -->
-    </section>
+                        </div> <!-- container -->
+                    </section>
 
-    <!--====== CONTACT PART ENDS ======-->
+                    <!--====== CONTACT PART ENDS ======-->
+
+                </div>
+                
+            </div>
+        </div>
+    </div>
 
 
     <!--====== BACK TOP TOP PART START ======-->
 
+    <button type="button" class="button-contact" data-toggle="modal" data-target="#exampleModalCenter">
+        <i class="lni lni-envelope"></i>
+    </button>
     <a href="#" class="back-to-top"><i class="lni lni-chevron-up"></i></a>
 
     <!--====== BACK TOP TOP PART ENDS ======-->
@@ -538,40 +580,40 @@
     <!--====== Main js ======-->
     <script src="{% static 'home/js/main.js' %}"></script>
     <script>
-        $.fn.jQuerySimpleCounter = function( options ) {
+        $.fn.jQuerySimpleCounter = function (options) {
             var settings = $.extend({
-                start:  0,
-                end:    100,
+                start: 0,
+                end: 100,
                 easing: 'swing',
                 duration: 400,
                 complete: ''
-            }, options );
-        
+            }, options);
+
             var thisElement = $(this);
-        
-            $({count: settings.start}).animate({count: settings.end}, {
+
+            $({ count: settings.start }).animate({ count: settings.end }, {
                 duration: settings.duration,
                 easing: settings.easing,
-                step: function() {
+                step: function () {
                     var mathCount = Math.ceil(this.count);
                     thisElement.text(mathCount);
                 },
                 complete: settings.complete
             });
         };
-        
+
         {% for counter in counter_items %}
-        $('#number{{counter.pk}}').jQuerySimpleCounter({end: {{counter.number}},duration: {{counter.duration}}});
+        $('#number{{counter.pk}}').jQuerySimpleCounter({ end: {{ counter.number }}, duration: {{ counter.duration }}});
         {% endfor %}
-        
-        
-        
-          /* AUTHOR LINK */
-         $('.about-me-img').hover(function(){
-                $('.authorWindowWrapper').stop().fadeIn('fast').find('p').addClass('trans');
-            }, function(){
-                $('.authorWindowWrapper').stop().fadeOut('fast').find('p').removeClass('trans');
-            });
+
+
+
+        /* AUTHOR LINK */
+        $('.about-me-img').hover(function () {
+            $('.authorWindowWrapper').stop().fadeIn('fast').find('p').addClass('trans');
+        }, function () {
+            $('.authorWindowWrapper').stop().fadeOut('fast').find('p').removeClass('trans');
+        });
     </script>
 
     <!-- scripts -->

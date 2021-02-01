@@ -28,8 +28,11 @@ class Language(models.Model):
 class Slider(models.Model):
     id = models.AutoField(primary_key=True)
     title = models.CharField(max_length=50)
+    title_size = models.IntegerField(default=44)
     text = models.TextField()
     image = models.ImageField(upload_to='home/slider/')
+    image_space_right = models.IntegerField(default=0)
+    image_space_top = models.IntegerField(default=0)
 
 class Counter(models.Model):
     id = models.AutoField(primary_key=True)

@@ -108,11 +108,11 @@
 
 
 .projectFactsWrap .item:hover i, .projectFactsWrap .item:hover p{
-  color: white;
+  color: orange;
 }
 
 .projectFactsWrap .item:hover span{
-  background: white;
+  background: orange;
 }
 
 @media (max-width: 786px){

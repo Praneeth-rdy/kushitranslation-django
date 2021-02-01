@@ -47,9 +47,10 @@
             text-align: center;
             z-index: 99;
         }
+
         .button-contact:hover {
             color: #fff;
-            background-color: navy; 
+            background-color: navy;
         }
     </style>
     <link rel="stylesheet" href="{% static 'home/css/steps.css' %}" />
@@ -87,8 +88,11 @@
                                         {{slider.text}}
                                     </p>
                                     <ul class="slider-btn rounded-buttons">
-                                        <li><a class="main-btn rounded-one" href="{% url 'main_app:get_quote' %}">GET
-                                                QUOTE</a></li>
+                                        <li>
+                                            <a class="main-btn rounded-one" href="{% url 'main_app:get_quote' %}">
+                                                GET A FREE QUOTE
+                                            </a>
+                                        </li>
                                     </ul>
                                 </div>
                             </div>
@@ -131,9 +135,9 @@
                         </p>
                     </div>
                     <img src="{% static 'home/images/process1.png' %}" class="steps-container-card-image" />
-                    <a href="{% url 'main_app:get_quote' %}">
-                        <h3 class="steps-container-card-heading">Get Quote</h3>
-                    </a>
+                    <!-- <a href="{% url 'main_app:get_quote' %}"> -->
+                    <h3 class="steps-container-card-heading">Get Quote</h3>
+                    <!-- </a> -->
                     <p class="steps-container-card-description">Upload your documents. Fill in the details.</p>
                 </div>
                 <div class="steps-container-card col-10 col-md-3">
@@ -169,10 +173,16 @@
                 <!--====== FEATRES TWO PART START ======-->
                 <section id="services" class="col-12 col-lg-6">
                     <div class="services-container">
+                        <div class="steps-container-text">
+                            <h2 class="steps-container-title">
+                                Our Services
+                            </h2>
+                        </div>
                         <div class="row">
                             {% for service in services %}
                             <div class="services-container-card col-lg-5">
-                                <i class="lni {{service.icon_code}} services-container-card-icon"></i>
+                                <i class="lni {{service.icon_code}} services-container-card-icon"
+                                    style="font-size: 30px;"></i>
                                 <h3 class="services-container-card-heading">{{service.title}}</h3>
                                 <p class="services-container-card-description">{{service.description}}</p>
                             </div>
@@ -220,8 +230,7 @@
             <div class="fullWidth eight columns">
                 <div class="projectFactsWrap d-flex flex-row justify-content-center">
                     {% for counter in counter_items %}
-                    <div class="item wow fadeInUpBig animated animated" data-number="{{counter.number}}"
-                        style="visibility: visible;">
+                    <div class="item wow fadeInUpBig animated animated" style="visibility: visible;">
                         <i class="fa fa-briefcase"></i>
                         <p id="number{{counter.pk}}" class="number">{{counter.number}}</p>
                         <p>{{counter.name}}</p>
@@ -516,7 +525,7 @@
                     <!--====== CONTACT PART ENDS ======-->
 
                 </div>
-                
+
             </div>
         </div>
     </div>
@@ -579,43 +588,6 @@
 
     <!--====== Main js ======-->
     <script src="{% static 'home/js/main.js' %}"></script>
-    <script>
-        $.fn.jQuerySimpleCounter = function (options) {
-            var settings = $.extend({
-                start: 0,
-                end: 100,
-                easing: 'swing',
-                duration: 400,
-                complete: ''
-            }, options);
-
-            var thisElement = $(this);
-
-            $({ count: settings.start }).animate({ count: settings.end }, {
-                duration: settings.duration,
-                easing: settings.easing,
-                step: function () {
-                    var mathCount = Math.ceil(this.count);
-                    thisElement.text(mathCount);
-                },
-                complete: settings.complete
-            });
-        };
-
-        {% for counter in counter_items %}
-        $('#number{{counter.pk}}').jQuerySimpleCounter({ end: {{ counter.number }}, duration: {{ counter.duration }}});
-        {% endfor %}
-
-
-
-        /* AUTHOR LINK */
-        $('.about-me-img').hover(function () {
-            $('.authorWindowWrapper').stop().fadeIn('fast').find('p').addClass('trans');
-        }, function () {
-            $('.authorWindowWrapper').stop().fadeOut('fast').find('p').removeClass('trans');
-        });
-    </script>
-
     <!-- scripts -->
     <script src="{% static 'home/particlesjs/particles.js' %}"></script>
     <script src="{% static 'home/particlesjs/app.js' %}"></script>

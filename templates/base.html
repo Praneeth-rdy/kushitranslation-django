@@ -94,6 +94,7 @@
                         <div class="navbar-btn d-none d-sm-inline-block">
                             <ul>
                                 <li><a class="solid" href="{% url 'admin:index' %}">{% if is_logged_in %}Admin{% else %}Login{% endif %}</a></li>
+                                <li><a class="solid" href="{% url 'main_app:get_quote' %}">Get Quote</a></li>
                             </ul>
                         </div>
                     </nav> <!-- navbar -->

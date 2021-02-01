@@ -33,7 +33,7 @@ class Slider(models.Model):
 
 class Counter(models.Model):
     id = models.AutoField(primary_key=True)
-    number = models.IntegerField(default=0)
+    number = models.CharField(max_length=10)
     name = models.CharField(max_length=50)
     duration = models.IntegerField(default=2000)
 

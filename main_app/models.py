@@ -45,3 +45,9 @@ class WhyUs(models.Model):
     title = models.CharField(max_length=50)
     description = models.TextField()
     icon_code = models.CharField(max_length=50)
+
+class Industry(models.Model):
+    text = models.CharField(max_length=100)
+
+class ProfessionalService(models.Model):
+    text = models.CharField(max_length=100)

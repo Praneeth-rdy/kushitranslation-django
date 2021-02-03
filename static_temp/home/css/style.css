@@ -4613,16 +4613,19 @@ p.form-message.success.form-message.error, p.form-message.error.form-message.err
 /*===== BACK TO TOP =====*/
 
 .back-to-top {
-  font-size: 20px;
+  font-size: 30px;
   color: #fff;
   position: fixed;
   right: 20px;
   bottom: 20px;
-  width: 45px;
-  height: 45px;
-  line-height: 45px;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
   border-radius: 5px;
+  border-color: navy;
+  border-width: 2px;
   background-color: navy;
+  border-style: solid;
   text-align: center;
   z-index: 99;
   -webkit-transition: all 0.3s ease-out 0s;
@@ -4634,8 +4637,8 @@ p.form-message.success.form-message.error, p.form-message.error.form-message.err
 }
 
 .back-to-top:hover {
-  color: #fff;
-  background-color: navy;
+  color: navy;
+  background-color: #fff;
 }
 
 /*# sourceMappingURL=style.css.map */

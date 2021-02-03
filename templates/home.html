@@ -34,23 +34,30 @@
         }
 
         .button-contact {
-            font-size: 20px;
+            font-size: 30px;
             color: #fff;
             position: fixed;
-            right: 70px;
+            right: 90px;
             bottom: 20px;
-            width: 45px;
-            height: 45px;
-            line-height: 45px;
+            width: 60px;
+            height: 60px;
+            line-height: 60px;
             border-radius: 5px;
             background-color: navy;
             text-align: center;
             z-index: 99;
+            border-color: navy;
+            border-width: 2px;
+            -webkit-transition: all 0.3s ease-out 0s;
+            -moz-transition: all 0.3s ease-out 0s;
+            -ms-transition: all 0.3s ease-out 0s;
+            -o-transition: all 0.3s ease-out 0s;
+            transition: all 0.3s ease-out 0s;
         }
 
         .button-contact:hover {
-            color: #fff;
-            background-color: navy;
+            color: navy;
+            background-color: #fff;
         }
     </style>
     <link rel="stylesheet" href="{% static 'home/css/steps.css' %}" />
@@ -98,7 +105,8 @@
                             </div>
                         </div> <!-- row -->
                     </div> <!-- container -->
-                    <div class="slider-image-box d-none d-lg-flex align-items-end" style="top:{{slider.image_space_top}}px;right:{{slider.image_space_right}}px;" >
+                    <div class="slider-image-box d-none d-lg-flex align-items-end"
+                        style="top:{{slider.image_space_top}}px;right:{{slider.image_space_right}}px;">
                         <div class="slider-image">
                             <img src="{{slider.image.url}}" alt="Hero">
                         </div> <!-- slider-imgae -->

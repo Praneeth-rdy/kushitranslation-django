@@ -123,35 +123,25 @@
                 <div class="col-12 col-md-6 col-lg-3 mb-4">
                     <ul class="footer-list">
                         <li class="footer-heading">INDUSTRIES</li>
-                        <li class="footer-text">Legal</li>
-                        <li class="footer-text">Gaming</li>
-                        <li class="footer-text">E-Commerce</li>
-                        <li class="footer-text">Media & Entertainment</li>
-                        <li class="footer-text">Advertising, Marketing, PR</li>
-                        <li class="footer-text">Finance</li>
+                        {% for industry in industries%}
+                        <li class="footer-text">{{industry.text}}</li>
+                        {% endfor %}
                     </ul>
                 </div>
                 <div class="col-12 col-md-6 col-lg-3 mb-4">
                     <ul class="footer-list">
                         <li class="footer-heading">PROFESSIONAL SERVICES</li>
-                        <li class="footer-text">Translation Services</li>
-                        <li class="footer-text">Professional Proofreading</li>
-                        <li class="footer-text">App Localization</li>
-                        <li class="footer-text">eLearning Localization</li>
-                        <li class="footer-text">Game Localization</li>
-                        <li class="footer-text">Websites Localization</li>
+                        {% for professional_service in professional_services %}
+                        <li class="footer-text">{{professional_service.text}}</li>
+                        {% endfor %}
                     </ul>
                 </div>
                 <div class="col-12 col-md-6 col-lg-3">
                     <ul class="footer-list">
                         <li class="footer-heading">LANGUAGES</li>
-                        <li class="footer-text">Japanese Translation</li>
-                        <li class="footer-text">Korean Translation</li>
-                        <li class="footer-text">Chinese Translation</li>
-                        <li class="footer-text">French Translation</li>
-                        <li class="footer-text">German Translation</li>
-                        <li class="footer-text">Spanish Translation</li>
-                        <li class="footer-text">Indic Translation</li>
+                        {% for language in languages %}
+                        <li class="footer-text">{{language.name}}</li>
+                        {% endfor %}
                     </ul>
                 </div>
                 <div class="col-12 col-md-6 col-lg-3 d-flex flex-column justify-content-center">

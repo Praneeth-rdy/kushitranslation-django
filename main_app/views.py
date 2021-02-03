@@ -13,6 +13,9 @@ def home(request):
     testimonials = Testimonial.objects.all()
     sliders = Slider.objects.all()
     counter_items = Counter.objects.all()
+    industries = Industry.objects.all()
+    professional_services = ProfessionalService.objects.all()
+    languages = Language.objects.all()
     whys = WhyUs.objects.all()
     l=(len(faqs)//2)
     faqs1=[]
@@ -44,6 +47,9 @@ def home(request):
         'sliders': sliders,
         'counter_items': counter_items,
         'whys': whys,
+        'industries': industries,
+        'professional_services': professional_services,
+        'languages': languages,
     }
     
     return render(request, 'home.html', context)

@@ -85,7 +85,7 @@ def get_quote(request):
             'is_doc': is_doc,
         })
         email = EmailMessage(
-            mail_subject, message, to=['k.praneeth1199@gmail.com']
+            mail_subject, message, to=['kushitranslations@gmail.com']
         )
         email.attach(str(document), document)
 
@@ -94,3 +94,24 @@ def get_quote(request):
         return HttpResponse("<h1>Our team has recieved your request and will get in touch with you soon.</h1>")
     else:
         return HttpResponse("<h1>Invalid Option</h1>")
+
+def send_message(request):
+    if request.method == 'POST':
+        name = request.POST.get('name')
+        email = request.POST.get('email')
+        subject = request.POST.get('subject')
+        message = request.POST.get('message')
+        mail_subject = 'Kushi Translations: You Recieved a Message'
+        message = render_to_string('leave_message.html', {
+            'name': name,
+            'email': email,
+            'subject': subject,
+            'message': message,
+        })
+        email = EmailMessage(
+            mail_subject, message, to=['kushitranslations@gmail.com']
+        )
+        email.send(fail_silently=False)
+        return HttpResponse("<h1>Your message has been sent. Thank You.</h1>")
+    else:
+        return HttpResponse("<h1>Invalid Try.</h1>")

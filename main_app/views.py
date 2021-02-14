@@ -83,7 +83,7 @@ def get_quote(request):
             'is_doc': is_doc,
         })
         email = EmailMessage(
-            mail_subject, message, to=['k.praneeth1199@gmail.com']
+            mail_subject, message, to=['kushitranslations@gmail.com']
         )
         email.attach(document.name, document.read(), document.content_type)
 

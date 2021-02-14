@@ -67,7 +67,6 @@ def get_quote(request):
         name = request.POST.get('name')
         email = request.POST.get('email')
         phone = request.POST.get('phone')
-        word_count = request.POST.get('word_count')
         document = request.FILES.get('document')
 
         is_doc = False
@@ -81,7 +80,6 @@ def get_quote(request):
             'phone': phone,
             'source_language': source_language,
             'target_language': target_language,
-            'word_count': word_count,
             'is_doc': is_doc,
         })
         email = EmailMessage(
